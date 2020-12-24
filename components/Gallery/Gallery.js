@@ -27,12 +27,14 @@ const IllustrationList = [
   },
 ];
 const Gallery = () => (
-  <Box w="100%" bgColor="white" minH="100vh">
-    <Flex flexDirection="column" py={24} maxWidth="80em" px={10} mx="auto">
+  <Box w="100%" bgColor="white" minH={{ lg: '100vh' }}>
+    <Flex flexDirection="column" py={[8, 8, 12, 24]} maxWidth="80em" px={10} mx="auto">
       <Grid templateColumns="repeat(2, 1fr)" gap={6} pt="2.5rem" pb="2.5rem">
         <Flex flexDirection="column">
-          <Heading>Our Creative Works</Heading>
-          <Text mt={8}>
+          <Heading as="h1" fontSize={{ md: '4xl', lg: '4.375rem' }}>
+            Our Creative Works
+          </Heading>
+          <Text mt={8} fontSize={{ sm: 'md', lg: 'base' }}>
             Rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui. Varius sit amet mattis
             vulputate enim nulla aliquet porttitor. Elit pellentesque habitant morbi tristique
             senectus et netus et malesuada.
@@ -62,7 +64,17 @@ const Gallery = () => (
       <Heading as="h3" ml="auto" mr="auto" mt="2rem" mb="1rem">
         Illustration
       </Heading>
-      <Grid templateColumns="repeat(4, 1fr)" gap={6} mt="2.5rem" mb="2.5rem">
+      <Grid
+        templateColumns={{
+          sm: '',
+          md: 'repeat(2, 1fr)',
+          lg: 'repeat(3, 1fr)',
+          xl: 'repeat(4, 1fr)',
+        }}
+        gap={6}
+        mt="2.5rem"
+        mb="2.5rem"
+      >
         {/* Item Gallery */}
         {IllustrationList.map((IllustrationLists, index) => (
           <Flex

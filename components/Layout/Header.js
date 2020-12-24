@@ -21,7 +21,7 @@ const MotionIcon = motion.custom(Box);
 const MotionArrow = motion.custom(Flex);
 
 const Header = () => (
-  <Box w="100%" bgColor="blueice.500" minH="100vh">
+  <Box w="100%" bgColor="blueice.500" minH={{ lg: '100vh' }}>
     <Flex flexDirection="column" ml="auto" mr="auto" maxWidth="80em" px={10} pb={10}>
       <Flex justifyContent="space-between" width="100%" pt="30px" pb="30px" alignItems="center">
         <Image src="/assets/bright.svg" alt="Logo Bright" />
@@ -32,31 +32,31 @@ const Header = () => (
             width="5/12"
             fontFamily="Inter"
             color="comet.400"
-            fontSize="1.125rem"
+            fontSize={{ md: 'base', lg: '1.125rem' }}
             textTransform="capitalize"
           >
-            <Link pl="1.5rem" pr="1.5rem" color="black.500" fontWeight="500">
+            <Link px={[2, 2, 4, 4]} mx={[1, 1, 2, 2]} color="black.500" fontWeight="500">
               Home
             </Link>
-            <Link pl="1.5rem" pr="1.5rem">
+            <Link px={[2, 2, 4, 4]} mx={[1, 1, 2, 2]}>
               Services
             </Link>
-            <Link pl="1.5rem" pr="1.5rem">
+            <Link px={[2, 2, 4, 4]} mx={[1, 1, 2, 2]}>
               Portofolio
             </Link>
-            <Link pl="1.5rem" pr="1.5rem">
+            <Link px={[2, 2, 4, 4]} mx={[1, 1, 2, 2]}>
               Contact
             </Link>
           </Flex>
           <Button
             variant="solid"
             display="flex"
-            size="lg"
+            size={{ sm: 'md', lg: 'lg' }}
             h="auto"
-            fontSize="1rem"
+            fontSize={{ sm: '0.875rem', lg: '1rem' }}
             borderRadius="25px"
-            py={4}
-            px={10}
+            py={[2, 3, 4, 4]}
+            px={[5, 5, 10, 10]}
             border="1px"
             bgColor="transparent"
             borderColor="black.100"
@@ -68,12 +68,12 @@ const Header = () => (
           </Button>
         </Flex>
       </Flex>
-      <Grid templateColumns="repeat(12, 1fr)" gap={6} pt="32px" pb="32px">
-        <GridItem flexDirection="column" alignItems="flex-start" colSpan={5}>
-          <Heading as="h1" fontSize="4.375rem" fontWeight="700">
+      <Grid templateColumns="repeat(12, 1fr)" gap={[3, 3, 6, 6]} pt="32px" pb="32px">
+        <GridItem flexDirection="column" alignItems="flex-start" colSpan={[7, 7, 5, 5]}>
+          <Heading as="h1" fontSize={{ md: '4xl', lg: '4.375rem' }} fontWeight="700">
             We help our user to build their business
           </Heading>
-          <Text fontSize="lg" my="6" color="comet.400">
+          <Text fontSize={{ sm: 'md', lg: 'lg' }} my="6" color="comet.400">
             Augue interdum velit euismod in pellentesque massa placerat. Ligula ullamcorper
             malesuada proin libero nunc consequat interdum varius sit.{' '}
           </Text>
@@ -81,11 +81,12 @@ const Header = () => (
             variant="solid"
             display="flex"
             h="auto"
-            size="lg"
-            fontSize="base"
+            size={{ sm: 'md', lg: 'lg' }}
+            h="auto"
+            fontSize={{ sm: '0.875rem', lg: '1rem' }}
             borderRadius="25px"
-            py={4}
-            px={10}
+            py={[2, 3, 4, 4]}
+            px={[5, 5, 10, 10]}
             bgColor="brand.300"
             border="1px"
             borderColor="brand.300"
@@ -96,13 +97,18 @@ const Header = () => (
             See Work
           </Button>
         </GridItem>
-        <GridItem colSpan={7}>
+        <GridItem colSpan={[5, 5, 7, 7]}>
           <Image height="auto" width="100%" src="/assets/illustration-home.png" />
         </GridItem>
       </Grid>
-      <Grid templateColumns="repeat(12,minmax(0,1fr))" gap={6}>
-        <GridItem colSpan={5} alignItems="center" display="flex">
-          <Box borderTop="1px" borderColor="comet.300" borderStyle="dashed" w="100%"></Box>
+      <Grid templateColumns="repeat(12,minmax(0,1fr))" gap={[3, 3, 6, 6]}>
+        <GridItem colSpan={[4, 4, 5, 5]} alignItems="center" display="flex">
+          <Box
+            borderTop="1px"
+            borderColor="comet.300"
+            borderStyle="dashed"
+            w={{ sm: '90%', lg: '100%' }}
+          ></Box>
         </GridItem>
         <GridItem colSpan={2} display="flex" justifyContent="center" alignItems="center">
           <MotionIcon mx="2" whileHover={{ y: '-20%' }}>
@@ -118,8 +124,14 @@ const Header = () => (
             <Tiktok boxSize={7} alignItems="center" />
           </MotionIcon>
         </GridItem>
-        <GridItem colSpan={5} alignItems="center" display="flex">
-          <Box borderTop="1px" borderColor="comet.300" borderStyle="dashed" w="100%"></Box>
+        <GridItem colSpan={[4, 4, 5, 5]} alignItems="center" display="flex">
+          <Box
+            borderTop="1px"
+            borderColor="comet.300"
+            borderStyle="dashed"
+            ml="auto"
+            w={{ sm: '90%', lg: '100%' }}
+          ></Box>
         </GridItem>
       </Grid>
       <Box position="relative" w="100%" mt={6}>

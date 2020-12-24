@@ -33,15 +33,39 @@ const IllustrationList = [
   },
 ];
 const Landingpage = () => (
-  <Box w="100%" bgColor="blueice.500" minH="100vh" mt={'20rem'} position="relative">
-    <Box postion="absolute" mt="-24rem">
+  <Box
+    w="100%"
+    bgColor="blueice.500"
+    minH="100vh"
+    mt={{ md: '6rem', xl: '20rem' }}
+    position="relative"
+  >
+    <Box postion="absolute" mt={{ md: '-8rem', lg: '-12rem', xl: '-24rem' }}>
       <Image src="/assets/wave.svg" />
     </Box>
-    <Flex flexDirection="column" pt={2} pb={24} maxWidth="80em" px={10} mx="auto" mt={20}>
+    <Flex
+      flexDirection="column"
+      pt={2}
+      pb={24}
+      maxWidth="80em"
+      px={10}
+      mx="auto"
+      mt={[10, 10, 10, 20]}
+    >
       <Heading as="h3" ml="auto" mr="auto" mt="2rem" mb="1rem">
         Landingpage
       </Heading>
-      <Grid templateColumns="repeat(4, 1fr)" gap={6} mt="2.5rem" mb="2.5rem">
+      <Grid
+        templateColumns={{
+          sm: '',
+          md: 'repeat(2, 1fr)',
+          lg: 'repeat(3, 1fr)',
+          xl: 'repeat(4, 1fr)',
+        }}
+        gap={6}
+        mt="2.5rem"
+        mb="2.5rem"
+      >
         {/* Item Gallery */}
         {IllustrationList.map((IllustrationLists, index) => (
           <Flex
