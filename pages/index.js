@@ -1,5 +1,7 @@
 import Gallery from '@/components/Gallery/Gallery';
+import Landingpage from '@/components/Gallery/Landingpage';
 import Layout from '@/components/Layout/Layout';
+import CallToAction from '@/components/Section/CallToAction';
 import { Flex } from '@chakra-ui/react';
 import Head from 'next/head';
 
@@ -12,6 +14,8 @@ export default function Home() {
       </Head>
       <Layout>
         <Gallery />
+        <Landingpage />
+        <CallToAction />
       </Layout>
     </>
   );

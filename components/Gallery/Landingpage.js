@@ -2,72 +2,51 @@ import React from 'react';
 import { Flex, Grid, Heading, Text, Button, Image, Box } from '@chakra-ui/react';
 const IllustrationList = [
   {
-    img: 'url(/assets/illustration/undraw1.svg)',
-    name: 'Illustration 1',
+    img: 'url(/assets/landingpage/landing-1.png)',
+    name: 'Landingpage 1',
+    caption: 'Study case about landingpage website ',
   },
   {
-    img: 'url(/assets/illustration/undraw1.svg)',
-    name: 'Illustration 1',
+    img: 'url(/assets/landingpage/landing-1.png)',
+    name: 'Landingpage 1',
+    caption: 'Study case about landingpage website ',
   },
   {
-    img: 'url(/assets/illustration/undraw1.svg)',
+    img: 'url(/assets/landingpage/landing-1.png)',
     name: 'Illustration 1',
+    caption: 'Study case about landingpage website ',
   },
   {
-    img: 'url(/assets/illustration/undraw1.svg)',
-    name: 'Illustration 1',
+    img: 'url(/assets/landingpage/landing-1.png)',
+    name: 'Landingpage 1',
+    caption: 'Study case about landingpage website ',
   },
   {
-    img: 'url(/assets/illustration/undraw1.svg)',
-    name: 'Illustration 1',
+    img: 'url(/assets/landingpage/landing-1.png)',
+    name: 'Landingpage 1',
+    caption: 'Study case about landingpage website ',
   },
   {
-    img: 'url(/assets/illustration/undraw1.svg)',
-    name: 'Illustration 1',
+    img: 'url(/assets/landingpage/landing-1.png)',
+    name: 'Landingpage 1',
+    caption: 'Study case about landingpage website ',
   },
 ];
-const Gallery = () => (
-  <Box w="100%" bgColor="white" minH="100vh">
-    <Flex flexDirection="column" py={24} maxWidth="80em" px={10} mx="auto">
-      <Grid templateColumns="repeat(2, 1fr)" gap={6} pt="2.5rem" pb="2.5rem">
-        <Flex flexDirection="column">
-          <Heading>Our Creative Works</Heading>
-          <Text mt={8}>
-            Rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui. Varius sit amet mattis
-            vulputate enim nulla aliquet porttitor. Elit pellentesque habitant morbi tristique
-            senectus et netus et malesuada.
-          </Text>
-        </Flex>
-        <Flex justifyContent="center" alignItems="flex-end">
-          <Button
-            variant="solid"
-            display="flex"
-            h="auto"
-            size="lg"
-            fontSize="base"
-            borderRadius="25px"
-            py={4}
-            px={10}
-            bgColor="brand.500"
-            border="1px"
-            borderColor="brand.500"
-            fontFamily="Josefin"
-            fontWeight="600"
-            _hover={{ bg: 'brand.300', borderColor: 'brand.300', color: 'black.100' }}
-          >
-            View All
-          </Button>
-        </Flex>
-      </Grid>
+const Landingpage = () => (
+  <Box w="100%" bgColor="blueice.500" minH="100vh" mt={'20rem'} position="relative">
+    <Box postion="absolute" mt="-24rem">
+      <Image src="/assets/wave.svg" />
+    </Box>
+    <Flex flexDirection="column" pt={2} pb={24} maxWidth="80em" px={10} mx="auto" mt={20}>
       <Heading as="h3" ml="auto" mr="auto" mt="2rem" mb="1rem">
-        Illustration
+        Landingpage
       </Heading>
       <Grid templateColumns="repeat(4, 1fr)" gap={6} mt="2.5rem" mb="2.5rem">
         {/* Item Gallery */}
         {IllustrationList.map((IllustrationLists, index) => (
           <Flex
             flexDirection="column"
-            backgroundColor="#B8FFF9"
+            backgroundColor="white"
             justifyContent="center"
             alignItems="center"
             p="1.25rem"
@@ -84,6 +63,10 @@ const Gallery = () => (
             <Heading as="h5" size="base" mt="1.25rem" mb="1rem">
               {IllustrationLists.name}
             </Heading>
+            <Text fontSize="sm" color="comet.500" mb={4}>
+              {' '}
+              {IllustrationLists.caption}{' '}
+            </Text>
             <Box position="relative" display="flex" justifyContent="center">
               <Button
                 position="absolute"
@@ -114,4 +97,4 @@ const Gallery = () => (
   </Box>
 );
 
-export default Gallery;
+export default Landingpage;
