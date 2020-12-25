@@ -3,7 +3,7 @@
   "short_name": "Bright",
   "theme_color": "#fff",
   "background_color": "#fff",
-  "display": "browser",
+  "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",
   "start_url": "https://future-bright.vercel.app/",
