@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, GridItem, List, ListItem, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, Grid, GridItem, List, ListItem, Text } from '@chakra-ui/react';
 import React from 'react';
 import Brand from '../Icons/Brand';
 import Twitter from '@/components/Icons/Twitter';

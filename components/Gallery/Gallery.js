@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flex, Grid, Heading, Text, Button, Image, Box } from '@chakra-ui/react';
+import { Flex, Grid, Heading, Text, Button, Box } from '@chakra-ui/react';
 const IllustrationList = [
   {
     img: 'url(/assets/illustration/undraw1.svg)',
