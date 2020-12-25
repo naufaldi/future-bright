@@ -17,7 +17,7 @@ const Footer = () => {
         maxWidth="80em"
         px={10}
         pt={[12, 24, 24, 24]}
-        pb={[8, 12, 12, 24]}
+        pb={[24, 12, 12, 24]}
         templateColumns="repeat(12,1fr)"
         templateRows="auto"
         textColor="white"
