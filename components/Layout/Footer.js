@@ -16,11 +16,12 @@ const Footer = () => {
         mx="auto"
         maxWidth="80em"
         px={10}
-        pt={[24, 24, 24, 24]}
-        pb={[12, 12, 12, 24]}
+        pt={[12, 24, 24, 24]}
+        pb={[8, 12, 12, 24]}
         templateColumns="repeat(12,1fr)"
         templateRows="auto"
         textColor="white"
+        gap={[2, 0, null, null]}
       >
         <GridItem colSpan={2} display="flex" flexDirection="column">
           <Brand
@@ -45,8 +46,20 @@ const Footer = () => {
             </MotionIcon>
           </Flex>
         </GridItem>
-        <GridItem colSpan={2} colStart={5} display="flex" flexDirection="column">
-          <Text color="comet.700" fontSize={{ sm: 'md', lg: 'xl' }} fontWeight="700" mb={6}>
+        <GridItem
+          colSpan={[6, 2, null, null]}
+          colStart={[1, 5, null, null]}
+          display="flex"
+          flexDirection="column"
+          rowStart={[2, 1, 1, 1]}
+        >
+          <Text
+            color="comet.700"
+            fontSize={{ sm: 'md', lg: 'xl' }}
+            fontWeight="700"
+            mt={[8, null, null, null]}
+            mb={[2, 6, null, null]}
+          >
             Home
           </Text>
           <List fontSize={{ sm: 'sm', lg: 'md' }}>
@@ -57,8 +70,20 @@ const Footer = () => {
             <ListItem my={2}>Contact</ListItem>
           </List>
         </GridItem>
-        <GridItem colSpan={2} colStart={7} display="flex" flexDirection="column">
-          <Text color="comet.700" fontSize={{ sm: 'md', lg: 'xl' }} fontWeight="700" mb={6}>
+        <GridItem
+          colSpan={[6, 2, null, null]}
+          colStart={[7, 7, null, null]}
+          display="flex"
+          flexDirection="column"
+          rowStart={[2, 1, 1, 1]}
+        >
+          <Text
+            color="comet.700"
+            fontSize={{ sm: 'md', lg: 'xl' }}
+            fontWeight="700"
+            mt={[8, null, null, null]}
+            mb={[2, 6, null, null]}
+          >
             Services
           </Text>
           <List fontSize={{ sm: 'sm', lg: 'md' }}>
@@ -69,8 +94,20 @@ const Footer = () => {
             <ListItem my={2}>Subscribe</ListItem>
           </List>
         </GridItem>
-        <GridItem colSpan={3} colStart={10} display="flex" flexDirection="column">
-          <Text color="comet.700" fontSize={{ sm: 'md', lg: 'xl' }} fontWeight="700" mb={6}>
+        <GridItem
+          colSpan={[12, 2, null, null]}
+          colStart={[1, 10, null, null]}
+          rowStart={[3, 1, 1, 1]}
+          display="flex"
+          flexDirection="column"
+        >
+          <Text
+            color="comet.700"
+            fontSize={{ sm: 'md', lg: 'xl' }}
+            fontWeight="700"
+            mt={[8, null, null, null]}
+            mb={[2, 6, null, null]}
+          >
             Contact
           </Text>
           <List fontSize={{ sm: 'sm', lg: 'md' }}>
@@ -81,10 +118,10 @@ const Footer = () => {
           </List>
         </GridItem>
         <GridItem
-          rowStart={2}
+          rowStart={[4, 2, null, null]}
           colSpan={12}
-          pt={12}
-          mt={12}
+          pt={[6, 12, null, null]}
+          mt={[6, 12, null, null]}
           borderTop={1}
           borderColor="comet.400"
           borderStyle="solid"

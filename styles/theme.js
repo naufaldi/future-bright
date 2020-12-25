@@ -15,6 +15,7 @@ const theme = {
     medium: 600,
     bold: 700,
   },
+
   colors: {
     ...chakraTheme.colors,
     brand: {
@@ -44,10 +45,10 @@ const theme = {
       700: '#9799a2',
     },
   },
-  variants: {
-    'shadow-blueice': {
-      boxShadow: '0px 4px 12px #B8FFF9',
-    },
+  shadows: {
+    ...chakraTheme.shadows,
+    'shadow-blueice': '0px 4px 12px #B8FFF9',
+    'shadow-top': '0px 4px 12px #FFCE07',
   },
 };
 

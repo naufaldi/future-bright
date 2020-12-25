@@ -37,20 +37,20 @@ const Landingpage = () => (
     w="100%"
     bgColor="blueice.500"
     minH="100vh"
-    mt={{ md: '6rem', xl: '20rem' }}
+    mt={{ base: '2rem', md: '6rem', xl: '14rem' }}
     position="relative"
   >
-    <Box postion="absolute" mt={{ md: '-8rem', lg: '-12rem', xl: '-24rem' }}>
+    <Box postion="absolute" mt={{ base: '-4rem', md: '-8rem', lg: '-12rem', xl: '-20rem' }}>
       <Image src="/assets/wave.svg" />
     </Box>
     <Flex
       flexDirection="column"
       pt={2}
-      pb={24}
+      pb={[4, 24]}
       maxWidth="80em"
       px={10}
       mx="auto"
-      mt={[10, 10, 10, 20]}
+      mt={[2, 10, 10, 20]}
     >
       <Heading as="h3" ml="auto" mr="auto" mt="2rem" mb="1rem">
         Landingpage

@@ -28,13 +28,18 @@ const IllustrationList = [
 ];
 const Gallery = () => (
   <Box w="100%" bgColor="white" minH={{ lg: '100vh' }}>
-    <Flex flexDirection="column" py={[8, 8, 12, 24]} maxWidth="80em" px={10} mx="auto">
-      <Grid templateColumns="repeat(2, 1fr)" gap={6} pt="2.5rem" pb="2.5rem">
+    <Flex flexDirection="column" py={[4, 8, 12, 24]} maxWidth="80em" px={[6, 10]} mx="auto">
+      <Grid
+        templateColumns={{ base: 'auto', md: 'repeat(2, 1fr)' }}
+        gap={6}
+        pt="2.5rem"
+        pb={[6, 9]}
+      >
         <Flex flexDirection="column">
-          <Heading as="h1" fontSize={{ md: '4xl', lg: '4.375rem' }}>
+          <Heading as="h1" fontSize={{ base: '4xl', lg: '4.375rem' }}>
             Our Creative Works
           </Heading>
-          <Text mt={8} fontSize={{ sm: 'md', lg: 'base' }}>
+          <Text mt={[4, 8]} fontSize={{ base: 'md', lg: 'base' }}>
             Rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui. Varius sit amet mattis
             vulputate enim nulla aliquet porttitor. Elit pellentesque habitant morbi tristique
             senectus et netus et malesuada.
@@ -61,7 +66,7 @@ const Gallery = () => (
           </Button>
         </Flex>
       </Grid>
-      <Heading as="h3" ml="auto" mr="auto" mt="2rem" mb="1rem">
+      <Heading as="h3" ml="auto" mr="auto" mt={[4, 8]} mb={4}>
         Illustration
       </Heading>
       <Grid

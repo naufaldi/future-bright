@@ -9,17 +9,22 @@ const CallToAction = () => {
       alignItems="center"
       mx="auto"
       direction="column"
-      py={40}
-      minH="50vh"
+      py={[24, 40]}
+      px={[6, 12]}
+      minH={{ base: '30vh', sm: '50vh' }}
       maxW="48em"
     >
-      <Heading as="h1" fontSize={{ md: '4xl', lg: '5xlrem' }} fontWeight="700">
+      <Heading
+        as="h1"
+        fontSize={{ base: '4xl', md: '4xl', lg: '5xl' }}
+        fontWeight="700"
+        textAlign="center"
+      >
         Any project in mind???
       </Heading>
       <Text
         fontFamily="Josefin"
-        as="h1"
-        fontSize={{ md: 'md', lg: 'lg' }}
+        fontSize={{ base: 'md', lg: 'lg' }}
         mt={6}
         mb={8}
         mx={[0, 0, 10, 0]}
@@ -33,7 +38,7 @@ const CallToAction = () => {
         textDecor="underline"
         color="brand.500"
         textTransform="capitalize"
-        fontSize={{ md: '4xl', lg: '5xl' }}
+        fontSize={{ base: '4xl', lg: '5xl' }}
         fontWeight="700"
       >
         Let’s Talk
