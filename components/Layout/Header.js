@@ -16,11 +16,7 @@ import Tiktok from '@/components/Icons/Tiktok';
 import Facebook from '@/components/Icons/Facebook';
 import Instagram from '@/components/Icons/Instagram';
 import { useMediaQuery } from '@chakra-ui/react';
-
 import { motion } from 'framer-motion';
-
-const MotionIcon = motion.custom(Box);
-const MotionArrow = motion.custom(Flex);
 
 const Header = () => {
   const [isNotMobile] = useMediaQuery('(min-width: 30em)');
@@ -58,7 +54,7 @@ const Header = () => {
               variant="solid"
               display="flex"
               size={{ base: 'md', lg: 'lg' }}
-              h="auto"
+              height="auto"
               fontSize={{ base: '0.875rem', lg: '1rem' }}
               borderRadius="25px"
               py={[2, 3, 4, 4]}
@@ -99,7 +95,7 @@ const Header = () => {
               display="flex"
               h="auto"
               size={{ base: 'md', lg: 'lg' }}
-              h="auto"
+              height="auto"
               fontSize={{ base: '0.875rem', lg: '1rem' }}
               borderRadius="25px"
               py={[3, 3, 4, 4]}
@@ -128,18 +124,18 @@ const Header = () => {
             ></Box>
           </GridItem>
           <GridItem colSpan={[6, 2]} display="flex" justifyContent="center" alignItems="center">
-            <MotionIcon mx="2" whileHover={{ y: '-20%' }}>
+            <Box as={motion.div} mx="2" whileHover={{ y: '-20%' }}>
               <Twitter boxSize={[6, 7]} alignItems="center" />
-            </MotionIcon>
-            <MotionIcon mx="2" whileHover={{ y: '-20%' }}>
+            </Box>
+            <Box as={motion.div} mx="2" whileHover={{ y: '-20%' }}>
               <Facebook boxSize={[6, 7]} alignItems="center" />
-            </MotionIcon>
-            <MotionIcon mx="2" whileHover={{ y: '-20%' }}>
+            </Box>
+            <Box as={motion.div} mx="2" whileHover={{ y: '-20%' }}>
               <Instagram boxSize={[6, 7]} alignItems="center" />
-            </MotionIcon>
-            <MotionIcon mx="2" whileHover={{ y: '-20%' }}>
+            </Box>
+            <Box as={motion.div} mx="2" whileHover={{ y: '-20%' }}>
               <Tiktok boxSize={[6, 7]} alignItems="center" />
-            </MotionIcon>
+            </Box>
           </GridItem>
           <GridItem colSpan={[3, 4, 5, 5]} alignItems="center" display="flex">
             <Box
@@ -152,7 +148,8 @@ const Header = () => {
           </GridItem>
         </Grid>
         <Box position="relative" w="100%" mt={6} display={{ base: 'none', sm: 'block' }}>
-          <MotionArrow
+          <Flex
+            as={motion.div}
             alignContent="flex-start"
             w="auto"
             position="absolute"
@@ -174,7 +171,7 @@ const Header = () => {
             <Text fontSize="base" color="comet.400">
               Scroll Down
             </Text>
-          </MotionArrow>
+          </Flex>
         </Box>
       </Flex>
     </Box>

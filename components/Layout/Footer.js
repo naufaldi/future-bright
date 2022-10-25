@@ -7,7 +7,6 @@ import Facebook from '@/components/Icons/Facebook';
 import Instagram from '@/components/Icons/Instagram';
 import { motion } from 'framer-motion';
 
-const MotionIcon = motion.custom(Box);
 const Footer = () => {
   return (
     <Box w="100%" bgColor="black.500" minH={'30vh'}>
@@ -32,18 +31,18 @@ const Footer = () => {
             h={[20, 20, 20, 24]}
           />
           <Flex justifyContent="flex-start" alignItems="center" mt={4}>
-            <MotionIcon mx="2" whileHover={{ y: '-20%' }}>
+            <Box as={motion.div} mx="2" whileHover={{ y: '-20%' }}>
               <Twitter boxSize={[5, 5, 5, 7]} alignItems="center" />
-            </MotionIcon>
-            <MotionIcon mx="2" whileHover={{ y: '-20%' }}>
+            </Box>
+            <Box as={motion.div} mx="2" whileHover={{ y: '-20%' }}>
               <Facebook boxSize={[5, 5, 5, 7]} alignItems="center" />
-            </MotionIcon>
-            <MotionIcon mx="2" whileHover={{ y: '-20%' }}>
+            </Box>
+            <Box as={motion.div} mx="2" whileHover={{ y: '-20%' }}>
               <Instagram boxSize={[5, 5, 5, 7]} alignItems="center" />
-            </MotionIcon>
-            <MotionIcon mx="2" whileHover={{ y: '-20%' }}>
+            </Box>
+            <Box as={motion.div} mx="2" whileHover={{ y: '-20%' }}>
               <Tiktok boxSize={[5, 5, 5, 7]} alignItems="center" />
-            </MotionIcon>
+            </Box>
           </Flex>
         </GridItem>
         <GridItem
