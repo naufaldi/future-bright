@@ -83,6 +83,7 @@ const Gallery = () => (
         {/* Item Gallery */}
         {IllustrationList.map((IllustrationLists, index) => (
           <Flex
+            key={index}
             flexDirection="column"
             backgroundColor="#B8FFF9"
             justifyContent="center"

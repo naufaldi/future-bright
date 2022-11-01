@@ -69,6 +69,7 @@ const Landingpage = () => (
         {/* Item Gallery */}
         {IllustrationList.map((IllustrationLists, index) => (
           <Flex
+            key={index}
             flexDirection="column"
             backgroundColor="white"
             justifyContent="center"
